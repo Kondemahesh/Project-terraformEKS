@@ -97,9 +97,9 @@ resource "aws_instance" "web_server" {
               echo "output = json" >> /root/.aws/config
 
               # Export AWS variables (optional for CLI use)
-              export AWS_ACCESS_KEY_ID=AKIAUTCWGAA3DPENGK5V
-              export AWS_SECRET_ACCESS_KEY=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
-              export AWS_DEFAULT_REGION=us-east-1
+              export AWS_ACCESS_KEY_ID=*****
+              export AWS_SECRET_ACCESS_KEY=***
+              export AWS_DEFAULT_REGION=***
 
               # Confirm success
               echo "AWS CLI and kubectl are configured" > /tmp/kube-setup-success.txt
