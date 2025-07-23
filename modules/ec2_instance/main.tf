@@ -89,11 +89,11 @@ resource "aws_instance" "web_server" {
               # Configure AWS CLI (write credentials file directly)
               mkdir -p /root/.aws
               echo "[default]" > /root/.aws/credentials
-              echo "aws_access_key_id = AKIAUTCWGAA3DPENGK5V" >> /root/.aws/credentials
-              echo "aws_secret_access_key = 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" >> /root/.aws/credentials
+              echo "aws_access_key_id = *****" >> /root/.aws/credentials
+              echo "aws_secret_access_key = *****" >> /root/.aws/credentials
 
               echo "[default]" > /root/.aws/config
-              echo "region = us-east-1" >> /root/.aws/config
+              echo "region = *****" >> /root/.aws/config
               echo "output = json" >> /root/.aws/config
 
               # Export AWS variables (optional for CLI use)
