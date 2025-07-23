@@ -1,0 +1,11 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.exe
+*.zip
+*.crash.log
+terraform.tfvars
+**/.terraform/
+.terraform/
+*.exe
+terraform.tfstate*
