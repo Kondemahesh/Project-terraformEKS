@@ -7,3 +7,5 @@ terraform.tfvars
 crash.log
 *.exe
 *.pem
+*.tfvars
+*.secrets
