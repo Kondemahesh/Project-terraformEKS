@@ -88,10 +88,18 @@ resource "aws_instance" "web_server" {
 
               # Configure AWS CLI (write credentials file directly)
               mkdir -p /root/.aws
+              echo "[default]" > /root/.aws/credentials
+              echo "aws_access_key_id = ${{ secrets.EKS_ADMIN_USER_ACCESS_KEY }}" >> /root/.aws/credentials
+              echo "aws_secret_access_key = ${{ secrets.EKS_ADMIN_USER_SECRET_ACCESS_KEY }}" >> /root/.aws/credentials
 
               echo "[default]" > /root/.aws/config
+              echo "region = ${{ vars.REGION }}" >> /root/.aws/config
+              echo "output = json" >> /root/.aws/config
 
               # Export AWS variables (optional for CLI use)
+              export AWS_ACCESS_KEY_ID=${{ secrets.EKS_ADMIN_USER_ACCESS_KEY }}
+              export AWS_SECRET_ACCESS_KEY=${{ secrets.EKS_ADMIN_USER_SECRET_ACCESS_KEY }}
+              export AWS_DEFAULT_REGION=${{ vars.REGION }}
 
               # Confirm success
               echo "AWS CLI and kubectl are configured" > /tmp/kube-setup-success.txt
