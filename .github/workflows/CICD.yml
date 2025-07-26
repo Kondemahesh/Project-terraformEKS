@@ -60,6 +60,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: 'maven'
+     - name: install maven
+       run: |
+         sudo apt-get update
+         sudo apt install -y maven
+              
      - name: Build-Project
        run: maven package
      - name: upload JAR artifact
