@@ -67,6 +67,7 @@ jobs:
               
      - name: Build-Project
        run: maven package
+       working-directory: ./springboot-eks
      - name: upload JAR artifact
        uses: actions/upload-artifact@v4
        with:
