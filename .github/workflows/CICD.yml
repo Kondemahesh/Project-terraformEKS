@@ -62,7 +62,7 @@ jobs:
         cache: 'maven'
      - name: Build-Project
        run: maven package
-     - name: upload Jar artifacts
+     - name: upload JAR artifact
        uses: actions/upload-artifact@v4
        with:
          name: app-jar
