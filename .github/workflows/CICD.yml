@@ -25,6 +25,6 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn compile
-      working-directory: springboot-EKS
+      working-directory: /home/runner/work/Project-terraformEKS/springboot-eks
 
     
