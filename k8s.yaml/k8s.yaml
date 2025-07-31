@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: <DOCKER_IMAGE_URI>
+          image: kondemahesh/bankapp:latest
           ports:
             - containerPort: 8080
 
