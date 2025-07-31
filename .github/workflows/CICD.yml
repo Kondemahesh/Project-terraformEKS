@@ -49,6 +49,7 @@ jobs:
         cache: 'maven'
     - name: unit test cases
       run: mvn test
+      working-directory: ./springboot-eks
  
   Build-artifactory: 
      runs-on: ubuntu-latest
